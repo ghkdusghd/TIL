@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>실습 01 - 컬러탭에서 지정한 색으로 배경색이 바뀌는 웹페이지</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        /*Items를 수직축으로 정렬. 주 축이 세로선이 된다.*/
+        height: 100vh;
+        /*정중앙으로 정렬하기 위해 뷰포트의 최대 높이값을 설정한다.*/
+        justify-content: center;
+        /*Items를 주 축(세로선)의 가운데로 정렬.*/
+        align-items: center;
+        /*Items를 교차축(가로선)의 가운데로 정렬.*/
+      }
+      .flex-items {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <h3>Change Color</h3>
+      <input type="color" value="#8C7AE6" class="flex-items" />
+    </div>
+    <script>
+      $(".flex-items").on("input", function () {
+        $("body").css({
+          "background-color": $(".flex-items").val(),
+        });
+      });
+    </script>
+  </body>
+</html>
