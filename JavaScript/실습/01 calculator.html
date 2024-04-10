@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div>
+      <!--id는 css에서, class는 js에서 사용합니다.-->
+      <table border="1">
+        <tr>
+          <td id="screen" colspan="4">0</td>
+        </tr>
+        <tr>
+          <td class="AC" colspan="2">AC</td>
+          <td class="jsSign">%</td>
+          <td id="sign" class="jsSign">÷</td>
+        </tr>
+        <tr>
+          <td class="number">7</td>
+          <td class="number">8</td>
+          <td class="number">9</td>
+          <td id="sign" class="jsSign">-</td>
+        </tr>
+        <tr>
+          <td class="number">4</td>
+          <td class="number">5</td>
+          <td class="number">6</td>
+          <td id="sign" class="jsSign">x</td>
+        </tr>
+        <tr>
+          <td class="number">1</td>
+          <td class="number">2</td>
+          <td class="number">3</td>
+          <td id="sign" class="jsSign">+</td>
+        </tr>
+        <tr>
+          <td class="number">00</td>
+          <td class="number">0</td>
+          <td class="jsSign">.</td>
+          <td id="sign" onclick="calculate()">=</td>
+        </tr>
+      </table>
+      <script src="calculator.js"></script>
+    </div>
+  </body>
+</html>
