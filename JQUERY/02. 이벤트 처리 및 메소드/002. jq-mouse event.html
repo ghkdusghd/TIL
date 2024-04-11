@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <img
+      id="img"
+      src="images/감튀커비.jpeg"
+      onmouseover="start(5000)"
+      onmouseout="cancel()"
+    />
+    <script>
+      let n = null;
+      function start(time) {
+        //이미지 위에 마우스오버하면 5초후 이미지 위에 '시작!' 출력
+        //'시작!' 출력 후 5초후 네이버로 이동
+        n = setTimeout('load("http://www.naver.com")', time);
+        document.getElementById("img").title = "시작!";
+      }
+      function cancel() {
+        //이미지 위에서 마우스를 떼면 타임(5초) 중단됨
+        if (n != null) {
+          clearTimeout(n);
+        }
+      }
+      function load(url) {
+        window.location = url;
+      }
+    </script>
+  </body>
+</html>

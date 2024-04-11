@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>트리거 메소드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("h1").click(function () {
+          $(this).html(function (idx, html) {
+            return html + "🍙";
+          });
+        });
+
+        let timeOut = setInterval(function () {
+          //trigger : 강제로 이벤트 발생함.
+          $("h1").last().trigger("click");
+          setTimeout(function () {
+            clearInterval(timeOut);
+          }, 4000);
+        }, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>one</h1>
+    <h1>two</h1>
+  </body>
+</html>

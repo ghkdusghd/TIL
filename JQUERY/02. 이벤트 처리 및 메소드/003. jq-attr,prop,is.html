@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jq - attr(),prop(),is()</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .items-01,
+      .items-02 {
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        width: 400px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .textbox-01,
+      .textbox-02 {
+        display: none;
+      }
+      input[type="text"] {
+        width: 390px;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div><h2>Checkbox</h2></div>
+      <div class="items-01">
+        <div><h4>Do you have passport?</h4></div>
+        <div><input type="checkbox" class="checkbox-01" />Yes</div>
+        <div class="textbox-01">
+          <input type="text" placeholder="Enter your passport number" />
+        </div>
+      </div>
+      <div class="items-02">
+        <div><h4>Do you have card?</h4></div>
+        <div><input type="checkbox" class="checkbox-02" />Yes</div>
+        <div class="textbox-02">
+          <input type="text" placeholder="Enter your membership number" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* element의 속성값을 찾아오는 메소드는 attr(), prop()이 있다.
+        attr()은 element가 가진 속성값이나 정보를 가져오고
+        prop()은 attr의 기능에 더해 element가 가진 실질적인 상태(버튼의 활성화, 체크 여부 등)
+        까지 가져올 수 있다.
+        element를 동적 생성하는 경우에는 prop()을 사용하는 것이 좋겠다.*/
+      $(".checkbox-01").change(function () {
+        if ($(this).prop("checked") == true) {
+          $(".textbox-01").fadeIn();
+        }
+        if ($(this).prop("checked") == false) {
+          $(".textbox-01").fadeOut();
+        }
+      });
+      /* is() 메소드는 선택한 요소가 ()안과 일치하는지 확인하여 true or false로 반환한다.
+      checkbox의 체크 여부를 알아보려면 is(':checked') 로 사용할 수 있다.*/
+      $(".checkbox-02").change(function () {
+        if ($(this).is(":checked") == true) {
+          $(".textbox-02").fadeIn();
+        }
+        if ($(this).is(":checked") == false) {
+          $(".textbox-02").fadeOut();
+        }
+      });
+    </script>
+  </body>
+</html>
