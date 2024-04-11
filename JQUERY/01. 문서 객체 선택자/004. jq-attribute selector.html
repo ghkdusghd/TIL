@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>속성 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //속성 선택자는 $(태그명[속성명]) 으로 적어준다.
+        $("p[title]").css("background-color", "pink");
+        //title 속성이 aa인 요소만 선택.
+        $("p[title = aa]").css("color", "tomato");
+        //title 속성이 aa가 아닌 요소 전부 선택.
+        $("p[title != aa]").css("color", "blue");
+      });
+    </script>
+  </head>
+  <body>
+    <p>제이쿼리</p>
+    <!--title 속성 : 해당 속성이 있는 요소에 대한 설명 등 참고할만한 정보를 나타낸다.-->
+    <p title="aa">p태그 aa</p>
+    <p title="bb">p태그 bb</p>
+  </body>
+</html>

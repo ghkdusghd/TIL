@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          let selected = $("select > option:selected").text();
+          alert(selected);
+        }, 3000);
+      });
+    </script>
+  </head>
+  <body>
+    <select name="" id="">
+      <option value="">치킨</option>
+      <option value="">라면</option>
+      <option value="">피자</option>
+      <option value="">밥</option>
+    </select>
+  </body>
+</html>

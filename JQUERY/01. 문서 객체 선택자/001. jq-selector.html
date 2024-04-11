@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div>수식 <input type="text" class="question" /></div>
+    <div>결과 <input type="text" class="result" /> <button>버튼</button></div>
+    <script>
+      $("button").click(function () {
+        //$('선택자')로 객체를 선택할 수 있다.
+        //input 타입의 경우, 요소값을 가져오려면 val() 메소드를 사용해야 한다.
+        let q = $(".question").val();
+        let r = eval(q);
+        $(".result").val(r);
+      });
+    </script>
+  </body>
+</html>

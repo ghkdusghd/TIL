@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>인덱스 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      //$(document).ready 는 생략 가능하다.
+      $(function () {
+        //eq(인덱스)
+        $("p:eq(0)").css("background-color", "yellowgreen");
+        //nth-child(인덱스) : 모든 자식 요소들 중애서 (인덱스)번째 자식을 선택한다.
+        //태그 상관 없이 같은 부모를 가진 모든 형제 요소들 중에서 선택함.
+        $("p:nth-child(1)").css("color", "blue");
+        //nth-of-type(인덱스) : 형제 요소들 중에서 같은 태그를 가진 형제들 중에서 선택함.
+        $("p:nth-of-type(1)").css("font-size", "2em");
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <p>div 안 p태그</p>
+      <p>div 안 p태그</p>
+      <p>div 안 p태그</p>
+    </div>
+    <div>
+      <p>div 안 p태그</p>
+      <p>div 안 p태그</p>
+      <p>div 안 p태그</p>
+    </div>
+    <div>
+      <div>div 안 div태그</div>
+      <p>div 안 p태그</p>
+      <p>div 안 p태그</p>
+    </div>
+  </body>
+</html>
