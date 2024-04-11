@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>실습 02 - 파일을 업로드할 수 있는 웹페이지</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .container {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        text-align: center;
+        width: 400px;
+        padding: 20px;
+        background-color: lightgray;
+      }
+      input[type="text"] {
+        width: 300px;
+        padding: 12px;
+        border: none;
+        background-color: whitesmoke;
+      }
+      input[type="file"] {
+        display: none;
+      }
+      label {
+        padding: 10px;
+        color: whitesmoke;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div><h2>File Upload</h2></div>
+      <div>
+        <input type="text" class="name" placeholder="파일을 업로드하세요." />
+        <input type="file" id="upload" /><label for="upload">Upload</label>
+      </div>
+    </div>
+    <script>
+      $("#upload").change(function (e) {
+        //change 이벤트가 발생한 요소를 가져온다.
+        let name = $(e.target).val();
+        $(".name").val(name);
+      });
+    </script>
+  </body>
+</html>
