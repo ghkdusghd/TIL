@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body{
+        margin: 20px;
+      }
+      #di{
+        border: 1px solid black;
+        padding: 30px;
+      }
+      #di a{
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <div id="di">
+    <a class="link" href="#none">link</a>
+  </div>
+    <script>
+      //버블링 : 하위요소에 일어난 이벤트가 상위요소에도 전달된다.
+      //이벤트가 발생하는 요소가 중첩되어 있는 경우 발생함.
+      //캡쳐링 : 버블링과는 반대로 하위요소로 이벤트가 전달된다.
+      let n=document.getElementById('di');  //상위
+      let m=document.querySelector('#di a'); //하위  
+
+      n.onclick=function () {
+        this.style.borderColor = "red";
+      };
+      m.onclick=function () {
+        e.stopPropagation(); //버블링, 캡쳐링 막는 함수
+        this.style.borderColor = "blue";
+      };
+    </script>
+  </body>
+</html>

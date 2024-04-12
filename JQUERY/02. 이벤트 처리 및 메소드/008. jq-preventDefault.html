@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <a class="link" href="http://www.naver.com">네이버</a>
+    <script>
+      let a = document.querySelector(".link");
+      a.addEventListener("click", function (e) {
+        e.preventDefault(); //이벤트 취소
+
+        let m = this.getAttribute("href");
+        console.log(m);
+
+        let z = confirm("네이버로 이동하고 싶습니까?");
+        if (z == true) {
+          location.href = m;
+        }
+      });
+    </script>
+  </body>
+</html>

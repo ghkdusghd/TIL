@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>타겟 속성 가져오기</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .profile {
+        position: absolute;
+        left: 35%;
+        top: 10%;
+        text-align: center;
+        box-shadow: 0 0 30px gray;
+        width: 350px;
+        padding: 20px;
+      }
+      .profile-photo,
+      .photo-upload {
+        margin-top: 50px;
+      }
+      input[type="file"] {
+        display: none;
+      }
+      img {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile">
+      <h3>upload profile</h3>
+      <div class="profile-photo">
+        <img src="images/a.jpg" />
+      </div>
+      <div class="photo-upload">
+        <label for="upload">Upload Photo</label>
+        <input type="file" id="upload" />
+      </div>
+    </div>
+    <script>
+      $("#upload").change(function (e) {
+        //URL.createObjectURL : Blob 또는 파일 객체를 메모리에서 URL로 변환해주는 역할을 하는 함수.
+        let pic = URL.createObjectURL(e.target.files[0]);
+        $("img").prop("src", pic);
+      });
+    </script>
+  </body>
+</html>
