@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>실습 03 - 스탑워치</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="03 stopwatch.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="watch">
+        <!--시--><span class="hours">00</span> :
+        <!--분--><span class="minutes">00</span> :
+        <!--초--><span class="seconds">00</span>.
+        <!--밀리초--><span class="miliSeconds">00</span>
+      </div>
+      <div class="button">
+        <button onclick="start()">start</button>
+        <button onclick="pause()">pause</button>
+        <button class="remove" onclick="reset()">reset</button>
+        <button onclick="record()">record</button>
+      </div>
+    </div>
+    <script src="03 stopwatch.js"></script>
+  </body>
+</html>

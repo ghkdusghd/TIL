@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.watch {
+  font-size: 2em;
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  color: #f0f0f0;
+  background-color: #787878;
+  border: 5px solid #f39c13;
+  border-radius: 10px;
+}
+.record {
+  border: 1px solid #f39c13;
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
