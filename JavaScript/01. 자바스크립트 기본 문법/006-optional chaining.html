@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <script>
+      const family = {
+        name: "tom",
+        dog: {
+          name: "jack",
+        },
+      };
+
+      // ?. (optional chaining) :
+      //객체 내의 key에 접근할 때 그 참조가 유효한지 아닌지 직접 명시하지 않고도 접근할 수 있는 연산자.
+      const animal = family.cat?.name;
+      console.log(animal); //undefined
+    </script>
+  </body>
+</html>
