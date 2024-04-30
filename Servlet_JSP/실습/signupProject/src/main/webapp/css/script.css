@@ -1,0 +1,77 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://pbs.twimg.com/media/FTz-XHRUsAAnVW_?format=jpg&name=large");
+    background-size: cover;
+    background-position: center; 
+    overflow: hidden;
+}
+
+h2{
+    color: white;
+}
+#loginbox{
+   box-shadow: 0px 0px 8px gray;
+   border-radius: 5px;
+   padding: 20px;
+   width: 300px;
+   text-align: center;
+   background-color: white;
+}
+.loginstyle{
+   position: relative;
+   margin: 20px 0;
+}
+.label{
+   position: absolute;
+   left:0;
+   top:10px;
+   transition: 0.3s;
+   color: gray;
+   pointer-event: none;   
+}
+.loginstyle input{
+   border: none;
+   border-bottom: 1px solid #3192bf;
+   outline: none;
+   width: 100%;
+   padding: 10px 0;
+}
+.loginstyle input:focus{
+   outline: none;
+    background-color: #c8e3f3;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+.label.active{
+   top:-10px;
+   color: #528841;
+   font-size: 0.8em;
+}
+#loginbox input[type=submit]{
+   border: none;
+   width: 100%;
+   border-radius: 15px;
+   background-color: #3192bf;
+   font-weight: bold;
+   padding: 8px;
+   cursor: pointer;
+   margin: 5px 0;
+}
+button{
+   border: none;
+   cursor: pointer;
+   margin: 5px;
+   float: right;
+   padding: 5px 10px;
+   color: black;
+}
+button:hover{
+   background-color: #3192bf;
+   border-radius: 15px;
+   color: white;
+}
