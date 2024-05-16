@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      //var 는 중복 선언이 가능하고, 재할당할 수 있다.
+      //그렇기 때문에 호이스팅이 일어날 가능성이 있어 사용을 지양하는 추세이다.
+      var name = "hong";
+      var name = "gildong";
+      document.write(name + "<br>");
+
+      //let 으로 선언된 변수는 중복 선언이 불가능하지만 재할당할 수 있다.
+      let job = "student";
+      job = "worker";
+      document.write(job + "<br>");
+
+      //const로 선언된 변수는 일정한 상수 값을 유지한다.
+      //(중복선언 불가, 재할당 불가)
+      const a = true;
+      const b = false;
+
+      document.write(a + "<br>");
+      document.write(b + "<br>");
+
+      //null과 undefined 차이
+      const c = null; //변수를 선언하고 빈 값을 할당한 상태.
+      document.write(typeof c + "<br>");
+
+      const d = undefined; //변수를 선언하고 값을 할당하지 않은 상태.
+      document.write(typeof d + "<br>");
+    </script>
+  </body>
+</html>
