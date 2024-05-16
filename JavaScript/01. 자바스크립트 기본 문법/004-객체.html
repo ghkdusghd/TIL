@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <script>
+      const user = {
+        name: "kim",
+        age: 43,
+        man: true,
+        //객체 안에 함수를 담을 수 있다.
+        on: function () {
+          console.log(`${user.name}은 개발자이다.`);
+        },
+      };
+      const post = {
+        title: "제목",
+        content: "내용",
+        user,
+        //key 이름과 value에 들어가는 변수명이 같다면 생략 가능하다.
+      };
+
+      //객체의 value값을 출력하는 표현방식으로는 아래 두 가지 방법이 있다.
+      user.name === user["name"];
+      console.log(user.name);
+      console.log(user["name"]);
+
+      //객체 안에 저장된 함수를 호출하는 방법.
+      document.write(user.on());
+
+      const user2 = {
+        name: "lee",
+      };
+      //user2 객체는 const 로 선언했기 때문에 문자열로 재할당할 수 없다.
+      user2 = "hello"; //Uncaught TypeError 발생.
+
+      //user2 객체의 속성(key, value)을 추가하는 것은 가능하다.
+      user2.man = false;
+      console.log(user2.man);
+
+      //삭제하는 것도 가능하다.
+      delete user2.man;
+      console.log("man" in user2);
+    </script>
+  </body>
+</html>

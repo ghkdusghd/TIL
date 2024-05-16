@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <script>
+      let number = [];
+      for (let i = 0; i < 6; i++) {
+        let lotto = Math.floor(Math.random() * 44) + 1;
+        for (let j in number) {
+          if (lotto == number[j]) {
+            lotto = Math.floor(Math.random() * 44) + 1;
+          }
+        }
+        number.push(lotto);
+      }
+      //배열 정렬하기
+      number.sort(function (a, b) {
+        return a - b; // - (빼기) 연산이 아닌, a~b까지 라는 의미. (오름차순)
+        //return b - a; // 내림차순
+      });
+
+      document.write(number);
+    </script>
+  </body>
+</html>
